@@ -1,0 +1,432 @@
+/************************
+  Main Styles
+*************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #b3e0ff;
+  padding: 15px;
+}
+
+h4{
+  padding-left: 20px;
+}
+
+/**********************
+  Header
+**********************/
+
+
+.main-nav li{
+  padding: 3px;
+}
+.main-nav a{
+  display: block;
+  padding: 10px 129px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.main-nav ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+
+}
+
+.main-header,
+.main-nav{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav a{
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  font-size: 0.875em;
+}
+.main-nav{
+  align-self: center;
+}
+.name{
+  align-self: center;
+}
+
+
+/*********************
+  profile
+*********************/
+
+.profile{
+  display: flex;
+  flex-direction: column-reverse;
+  margin: auto;
+  padding-bottom: 10%;
+}
+
+.profile img{
+  align-self: center;
+  width: 85%;
+}
+
+.profile p{
+  font-weight: 300;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/********************
+  portfolio
+********************/
+
+
+.wrapper{
+  background-color: #fff;
+  padding: 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: #fff;
+}
+
+
+#portfolio{
+  text-align: center;
+  background-color: #fff;
+  flex-direction: row;
+  padding: 25px 0px;
+}
+.portfolio-item{
+  text-align: center;
+}
+
+.portfolio-item img{
+  width: 96%;
+  align-self: center;
+  margin-left: .2em;
+}
+
+.content{
+  font-size: 0.875em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.title{
+  font-weight: 400;
+}
+
+/***********************
+  Footer
+***********************/
+
+
+.main-footer{
+  padding: 0 2%;
+  margin-top: 100px;
+}
+
+.desktop-nav{
+  display: none;
+}
+
+.desktop-nav{
+  border-top: 1px solid #ccc;
+}
+
+
+.desktop-nav a{
+  padding: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
+
+.mobile-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.875em;
+}
+
+.mobile-nav li{
+  list-style-type: none;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+#contact{
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.desktop_nav_title,
+.mobile_nav_title{
+  font-size: 0.875em;
+}
+
+.mobile-nav{
+  font-size: 0.875em;
+}
+
+
+@media (min-width:768px) {
+
+/**********************
+   Header
+***********************/
+
+  body{
+      background-color: #fafafa;
+  }
+
+    .main-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 1.125em;
+    }
+
+    .name{
+      margin-bottom: 0;
+    }
+
+    .main-nav{
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    .main-nav ul{
+      display: flex;
+    }
+
+    .main-nav a{
+      padding: 20px;
+      background-color: #fafafa;
+      color:#000;
+      font-weight: 700;
+    }
+
+/************************
+    profile
+************************/
+
+    .profile{
+      display: flex;
+      flex-direction: row;
+      padding: 0 3.5% 5%;
+      font-size: 1.125em;
+    }
+
+    .profile img{
+      width: 55%;
+    }
+
+    .profile p{
+      padding: 0 5% 5% 0;
+    }
+
+/*************************
+    portfolio
+*************************/
+
+    #portfolio{
+      text-align: center;
+    }
+
+    .container,
+    .portfolio-item{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
+    }
+
+    .title{
+      margin-bottom: auto;
+    }
+
+    .container{
+      align-items: baseline;
+    }
+
+    .portfolio-item{
+      width: 50%;
+      margin: 0;
+    }
+
+    .content{
+      padding: 5%;
+    }
+
+/**********************
+    Footer
+***********************/
+
+    .desktop-nav, .desktop-nav li{
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 0.875em;
+    }
+
+    .desktop-nav ul{
+      display: flex;
+
+    }
+
+    .desktop-nav li{
+      list-style: none;
+      justify-content: space-between;
+    }
+
+    .mobile-nav{
+      display: none;
+    }
+
+    .desktop_nav_title{
+      align-self: center;
+    }
+
+    .footer-title{
+      padding-top: 15px;
+    }
+
+    #tel,
+    #email{
+      font-weight: 300;
+    }
+    #phone_number,
+    #email_address{
+      font-weight: 700;
+      padding-left: 10px;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+/*************************
+  Header
+**************************/
+
+  body{
+      background-color: #fafafa;
+  }
+
+    .main-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .name{
+      margin-left: 3%;
+      align-self: auto;
+    }
+
+    .main-nav {
+      align-self: auto;
+    }
+
+    .main-nav a{
+      padding:20px;
+      font-weight: 700;
+      color: #000;
+    }
+    .main-nav li{
+      justify-content: space-between;
+    }
+
+
+/**************************
+  profile
+***************************/
+
+    .profile{
+      padding: 5%;
+    }
+
+    .profile p{
+      margin-top: 0;
+    }
+
+/**************************
+  portfolio
+***************************/
+
+
+    .container,
+    .portfolio-item{
+      display: flex;
+      flex-flow: row wrap;
+      font-size: 1.125em;
+    }
+
+    .portfolio-item{
+      flex-direction: column;
+      margin: 5px;
+      width: 29%;
+      padding-top: 2%;
+    }
+
+    #portfolio{
+      text-align: center;
+    }
+
+/*************************
+  Footer
+**************************/
+
+    .desktop-nav, .desktop-nav li{
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .desktop-nav ul{
+      display: flex;
+    }
+
+    .desktop-nav li{
+      list-style: none;
+      justify-content: space-between;
+    }
+
+    .desktop-nav a{
+      padding: 20px;
+    }
+
+    .desktop_nav_title{
+      align-self: center;
+    }
+
+    .mobile-nav{
+      display: none;
+    }
+
+    #email, #tel{
+      font-weight: 600;
+    }
+
+    .contact-info{
+      font-size: 1.25em;
+      margin-top: 5%;
+    }
+}
