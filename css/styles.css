@@ -1,24 +1,13 @@
-/************************
-  Main Styles
-*************************/
-
 * {
   box-sizing: border-box;
 }
 
 body{
-  font-family: 'Lato', sans-serif;
   background-color: #b3e0ff;
   padding: 15px;
+  font-family: 'Lato', sans-serif;
 }
 
-h4{
-  padding-left: 20px;
-}
-
-/**********************
-  Header
-**********************/
 
 
 .main-nav li{
@@ -26,9 +15,16 @@ h4{
 }
 .main-nav a{
   display: block;
-  padding: 10px 129px;
+  padding: 10px 100px;
   text-align: center;
   background-color: #fff;
+}
+
+.main-nav a{
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  font-size: 0.875em;
 }
 
 .main-nav ul{
@@ -38,29 +34,15 @@ h4{
 
 }
 
-.main-header,
-.main-nav{
-  display: flex;
-  flex-direction: column;
-}
-
-.main-nav a{
-  text-decoration: none;
-  font-weight: 700;
-  color: #000;
-  font-size: 0.875em;
-}
-.main-nav{
-  align-self: center;
-}
 .name{
   align-self: center;
 }
 
-
-/*********************
-  profile
-*********************/
+.container,
+.main-nav{
+  display: flex;
+  flex-direction: column;
+}
 
 .profile{
   display: flex;
@@ -69,35 +51,22 @@ h4{
   padding-bottom: 10%;
 }
 
+.profile p{
+  text-align: center;
+}
+
 .profile img{
   align-self: center;
   width: 85%;
 }
 
-.profile p{
-  font-weight: 300;
-  text-align: center;
-  padding-top: 10px;
-}
-
-/********************
-  portfolio
-********************/
-
-
 .wrapper{
-  background-color: #fff;
-  padding: 20px;
-}
-
-.container{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   background-color: #fff;
 }
-
 
 #portfolio{
   text-align: center;
@@ -107,10 +76,11 @@ h4{
 }
 .portfolio-item{
   text-align: center;
+  padding: 0.75em;
 }
 
 .portfolio-item img{
-  width: 96%;
+  width: 100%;
   align-self: center;
   margin-left: .2em;
 }
@@ -121,18 +91,9 @@ h4{
   font-weight: 300;
 }
 
-.title{
-  font-weight: 400;
-}
-
-/***********************
-  Footer
-***********************/
-
-
 .main-footer{
-  padding: 0 2%;
-  margin-top: 100px;
+  margin-top: 40px;
+  border-top: 1px solid #000;
 }
 
 .desktop-nav{
@@ -145,10 +106,10 @@ h4{
 
 
 .desktop-nav a{
-  padding: 20px;
   text-decoration: none;
   font-weight: 700;
   color: #000;
+  padding-left: 15px;
 }
 
 .mobile-nav{
@@ -166,267 +127,200 @@ h4{
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 35px;
 }
 
 
-#contact{
+.statement{
   font-weight: 300;
   line-height: 1.5;
 }
 
-.desktop_nav_title,
-.mobile_nav_title{
-  font-size: 0.875em;
-}
-
 .mobile-nav{
   font-size: 0.875em;
+  margin-top: 10px;
+}
+
+#email{
+  margin-top: 0;
+}
+
+#phone_number,
+#email_address{
+  padding-left: 10px;
 }
 
 
-@media (min-width:768px) {
-
-/**********************
-   Header
-***********************/
-
-  body{
-      background-color: #fafafa;
+@media (min-width: 768px) {
+  .main-nav ul{
+    display: flex;
   }
 
-    .main-header{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      font-size: 1.125em;
-    }
+  .main-nav a{
+    display: block;
+    padding: 10px 75px;
+    text-align: center;
+    background-color: #fafafa;
+  }
 
-    .name{
-      margin-bottom: 0;
-    }
+  .profile{
+    display: flex;
+    flex-direction: row;
+    padding: 0 3.5% 5%;
+    font-size: 1.125em;
+  }
 
-    .main-nav{
-      margin-bottom: 20px;
-      margin-top: 0;
-    }
+  .profile img{
+    width: 45%;
+  }
 
-    .main-nav ul{
-      display: flex;
-    }
+  .profile p{
+    padding: 0 5% 5% 0;
+  }
 
-    .main-nav a{
-      padding: 20px;
-      background-color: #fafafa;
-      color:#000;
-      font-weight: 700;
-    }
+  .portfolio-item,
+  .wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
-/************************
-    profile
-************************/
+  }
 
-    .profile{
-      display: flex;
-      flex-direction: row;
-      padding: 0 3.5% 5%;
-      font-size: 1.125em;
-    }
+  .portfolio-item{
+    width: 50%;
+    margin: 0;
+  }
 
-    .profile img{
-      width: 55%;
-    }
+#portfolio{
+  display: flex;
+  width:51%;
+  justify-content: center;
+}
 
-    .profile p{
-      padding: 0 5% 5% 0;
-    }
+  .desktop-nav, .desktop-nav li{
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875em;
+  }
 
-/*************************
-    portfolio
-*************************/
+  .desktop-nav ul{
+    display: flex;
 
-    #portfolio{
-      text-align: center;
-    }
+  }
 
-    .container,
-    .portfolio-item{
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
+  .desktop-nav li{
+    list-style: none;
+    justify-content: space-between;
+  }
 
-    }
+  .mobile-nav{
+    display: none;
+  }
 
-    .title{
-      margin-bottom: auto;
-    }
+  .desktop_nav_title{
+    align-self: center;
+  }
 
-    .container{
-      align-items: baseline;
-    }
+  .footer-title{
+    padding-top: 15px;
+  }
 
-    .portfolio-item{
-      width: 50%;
-      margin: 0;
-    }
+.contact_container{
+  max-width: 550px;
+  margin-left: 98px;
+}
 
-    .content{
-      padding: 5%;
-    }
-
-/**********************
-    Footer
-***********************/
-
-    .desktop-nav, .desktop-nav li{
-      visibility: visible;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      font-size: 0.875em;
-    }
-
-    .desktop-nav ul{
-      display: flex;
-
-    }
-
-    .desktop-nav li{
-      list-style: none;
-      justify-content: space-between;
-    }
-
-    .mobile-nav{
-      display: none;
-    }
-
-    .desktop_nav_title{
-      align-self: center;
-    }
-
-    .footer-title{
-      padding-top: 15px;
-    }
-
-    #tel,
-    #email{
-      font-weight: 300;
-    }
-    #phone_number,
-    #email_address{
-      font-weight: 700;
-      padding-left: 10px;
-    }
 
 }
+
 
 @media (min-width:1024px) {
 
-/*************************
-  Header
-**************************/
-
   body{
-      background-color: #fafafa;
+    background-color: #fafafa;
   }
 
-    .main-header{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .name{
-      margin-left: 3%;
-      align-self: auto;
-    }
-
-    .main-nav {
-      align-self: auto;
-    }
-
-    .main-nav a{
-      padding:20px;
-      font-weight: 700;
-      color: #000;
-    }
-    .main-nav li{
-      justify-content: space-between;
-    }
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
 
-/**************************
-  profile
-***************************/
+  .main-nav{
+    display: flex;
+    flex-direction: row;
+  }
 
-    .profile{
-      padding: 5%;
-    }
+  .name{
+    align-self: center;
+    padding-left: 84px;
+  }
 
-    .profile p{
-      margin-top: 0;
-    }
+  .main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-/**************************
-  portfolio
-***************************/
+  .main-nav ul{
+    display: flex;
+    margin: 0 48px;
+  }
+
+  .main-nav li{
+    list-style-type: none;
+    align-self: center;
+  }
+
+  .main-nav a{
+    text-decoration: none;
+    padding: 20px;
+  }
+
+  .profile{
+    display: flex;
+    font-size: 1.5em;
+    margin: 0 30px;
+    padding-top: 30px;
+  }
+
+  .profile p{
+    margin-right: 80px;
+    font-size: 75%;
+  }
+
+  .wrapper{
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 25px;
+    padding-bottom: 55px;
+    margin-top: 3%;
+  }
 
 
-    .container,
-    .portfolio-item{
-      display: flex;
-      flex-flow: row wrap;
-      font-size: 1.125em;
-    }
+  #portfolio{
+    width: 95%;
+    text-align: center;
+    padding: 25px 0;
+    justify-content: center;
+  }
 
-    .portfolio-item{
-      flex-direction: column;
-      margin: 5px;
-      width: 29%;
-      padding-top: 2%;
-    }
+  .portfolio-item{
+    display: flex;
+    flex-flow: column wrap;
+    width: 31%;
+    text-align: center;
+  }
 
-    #portfolio{
-      text-align: center;
-    }
+  .portfolio-item img{
+    width: 100%;
+  }
 
-/*************************
-  Footer
-**************************/
+  .contact_container{
+    margin-left: 31%;
+  }
 
-    .desktop-nav, .desktop-nav li{
-      visibility: visible;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .desktop-nav ul{
-      display: flex;
-    }
-
-    .desktop-nav li{
-      list-style: none;
-      justify-content: space-between;
-    }
-
-    .desktop-nav a{
-      padding: 20px;
-    }
-
-    .desktop_nav_title{
-      align-self: center;
-    }
-
-    .mobile-nav{
-      display: none;
-    }
-
-    #email, #tel{
-      font-weight: 600;
-    }
-
-    .contact-info{
-      font-size: 1.25em;
-      margin-top: 5%;
-    }
 }
